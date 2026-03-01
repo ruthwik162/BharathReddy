@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ReactLenis } from '@studio-freight/react-lenis';
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -190,84 +191,85 @@ const Expertise = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="relative w-full bg-[#f5f5f3] py-32 px-6 md:px-16 lg:px-24 overflow-hidden text-[#0a0a0a] font-Zeist_Medium">
+        <ReactLenis root>
+            <section ref={containerRef} className="relative w-full bg-[#f5f5f3] py-32 px-6 md:px-16 lg:px-24 overflow-hidden text-[#0a0a0a] font-Zeist_Medium">
 
-            {/* BACKGROUND WATERMARK */}
-            <div className="absolute top-20 left-10 opacity-[0.02] select-none pointer-events-none">
-                <h2 className="text-[25vw] font-black uppercase tracking-tighter leading-none">Capabilities</h2>
-            </div>
-
-            {/* HEADER SECTION */}
-            <div className="relative z-10 flex flex-col mb-32 border-b border-black/10 pb-16">
-                <div className="overflow-hidden">
-                    <p className="expertise-label text-[10px] font-bold tracking-[0.4em] uppercase mb-8 opacity-40">
-                        Expertise / Section 02
-                    </p>
+                {/* BACKGROUND WATERMARK */}
+                <div className="absolute top-20 left-10 opacity-[0.02] select-none pointer-events-none">
+                    <h2 className="text-[25vw] font-black uppercase tracking-tighter leading-none">Capabilities</h2>
                 </div>
-                <div className="flex flex-col lg:flex-row justify-between items-end gap-10">
-                    <h2 className="text-[14vw] md:text-[10vw] font-black uppercase tracking-tighter leading-[0.8]">
-                        CORE<br />
-                        <span className="outline-text text-transparent">SKILLS</span>
-                    </h2>
-                    <div className="max-w-xs text-right">
-                        <p className="text-[10px] font-bold uppercase tracking-widest leading-relaxed opacity-60">
-                            Engineering attention through <br />asymmetric design & narrative logic.
+
+                {/* HEADER SECTION */}
+                <div className="relative z-10 flex flex-col mb-32 border-b border-black/10 pb-16">
+                    <div className="overflow-hidden">
+                        <p className="expertise-label text-[10px] font-bold tracking-[0.4em] uppercase mb-8 opacity-40">
+                            Expertise / Section 02
                         </p>
                     </div>
-                </div>
-            </div>
-
-            {/* EDITORIAL GRID */}
-            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-                {skills.map((skill, index) => (
-                    <div
-                        key={index}
-                        className={`skill-card group relative bg-white border border-black/5 p-10 flex flex-col justify-between overflow-hidden transition-all duration-700 hover:bg-black hover:text-white ${skill.size}`}
-
-                    >
-                        {/* THE CONTINUOUS ICON BACKGROUND */}
-                        <div className="absolute top-20 right-20 w-64 h-64 -translate-y-12 translate-x-12 pointer-events-none group-hover:scale-110 transition-transform duration-1000">
-                            {skill.icon}
-                        </div>
-                        {/* Z-10 added to ensure content stays above the bg image */}
-                        <div className="flex justify-between items-start relative z-10">
-                            <span className="text-[9px] font-semibold uppercase tracking-[0.3em] opacity-40 group-hover:opacity-100 group-hover:text-white/60">
-                                {skill.tag}
-                            </span>
-                            <span className="text-xl font-light opacity-20 group-hover:opacity-100 italic">
-                                /0{index + 1}
-                            </span>
-                        </div>
-
-                        <div className="mt-auto relative z-10">
-                            <h3 className="text-4xl md:text-5xl font-semibold uppercase tracking-tighter leading-none mb-6 group-hover:translate-x-2 transition-transform duration-500">
-                                {skill.title}
-                            </h3>
-                            <p className="text-xs font-medium  tracking-tight leading-relaxed opacity-40 group-hover:opacity-80 max-w-[200px]">
-                                {skill.desc}
+                    <div className="flex flex-col lg:flex-row justify-between items-end gap-10">
+                        <h2 className="text-[14vw] md:text-[10vw] font-black uppercase tracking-tighter leading-[0.8]">
+                            CORE<br />
+                            <span className="outline-text text-transparent">SKILLS</span>
+                        </h2>
+                        <div className="max-w-xs text-right">
+                            <p className="text-[10px] font-bold uppercase tracking-widest leading-relaxed opacity-60">
+                                Engineering attention through <br />asymmetric design & narrative logic.
                             </p>
                         </div>
-
-                        {/* HOVER ACCENT LINE */}
-                        <div className="absolute top-0 right-0 w-1 h-0 bg-black group-hover:h-full group-hover:bg-white transition-all duration-700" />
                     </div>
-                ))}
-            </div>
-
-            {/* FOOTER TAG */}
-            <div className="mt-24 flex justify-between items-center border-t border-black/10 pt-12">
-                <div className="flex gap-10">
-                    <span className="text-[10px] font-black uppercase tracking-widest">Precision</span>
-                    <span className="text-[10px] font-black uppercase tracking-widest">Impact</span>
-                    <span className="text-[10px] font-black uppercase tracking-widest">Growth</span>
                 </div>
-                <div className="w-20 h-[1px] bg-black opacity-20" />
-            </div>
 
-            {/* GRAIN OVERLAY (Consistency with Hero) */}
-            <div className="absolute inset-0 pointer-events-none opacity-[0.3] mix-blend-multiply bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                {/* EDITORIAL GRID */}
+                <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                    {skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className={`skill-card group relative bg-white border border-black/5 p-10 flex flex-col justify-between overflow-hidden transition-all duration-700 hover:bg-black hover:text-white ${skill.size}`}
 
-            <style jsx>{`
+                        >
+                            {/* THE CONTINUOUS ICON BACKGROUND */}
+                            <div className="absolute top-20 right-20 w-64 h-64 -translate-y-12 translate-x-12 pointer-events-none group-hover:scale-110 transition-transform duration-1000">
+                                {skill.icon}
+                            </div>
+                            {/* Z-10 added to ensure content stays above the bg image */}
+                            <div className="flex justify-between items-start relative z-10">
+                                <span className="text-[9px] font-semibold uppercase tracking-[0.3em] opacity-40 group-hover:opacity-100 group-hover:text-white/60">
+                                    {skill.tag}
+                                </span>
+                                <span className="text-xl font-light opacity-20 group-hover:opacity-100 italic">
+                                    /0{index + 1}
+                                </span>
+                            </div>
+
+                            <div className="mt-auto relative z-10">
+                                <h3 className="text-4xl md:text-5xl font-semibold uppercase tracking-tighter leading-none mb-6 group-hover:translate-x-2 transition-transform duration-500">
+                                    {skill.title}
+                                </h3>
+                                <p className="text-xs font-medium  tracking-tight leading-relaxed opacity-40 group-hover:opacity-80 max-w-[200px]">
+                                    {skill.desc}
+                                </p>
+                            </div>
+
+                            {/* HOVER ACCENT LINE */}
+                            <div className="absolute top-0 right-0 w-1 h-0 bg-black group-hover:h-full group-hover:bg-white transition-all duration-700" />
+                        </div>
+                    ))}
+                </div>
+
+                {/* FOOTER TAG */}
+                <div className="mt-24 flex justify-between items-center border-t border-black/10 pt-12">
+                    <div className="flex gap-10">
+                        <span className="text-[10px] font-black uppercase tracking-widest">Precision</span>
+                        <span className="text-[10px] font-black uppercase tracking-widest">Impact</span>
+                        <span className="text-[10px] font-black uppercase tracking-widest">Growth</span>
+                    </div>
+                    <div className="w-20 h-[1px] bg-black opacity-20" />
+                </div>
+
+                {/* GRAIN OVERLAY (Consistency with Hero) */}
+                <div className="absolute inset-0 pointer-events-none opacity-[0.3] mix-blend-multiply bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
+                <style jsx>{`
                 .outline-text {
                     -webkit-text-stroke: 1px #0a0a0a;
                 }
@@ -281,7 +283,8 @@ const Expertise = () => {
                     background-blend-mode: normal; 
                 }
             `}</style>
-        </section>
+            </section>
+        </ReactLenis>
     );
 };
 

@@ -6,8 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from './Navbar';
-import ReactLenis from '@studio-freight/react-lenis';
-
+import { ReactLenis } from '@studio-freight/react-lenis';
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 }
@@ -29,23 +28,23 @@ const Hero = () => {
             duration: 1.8,
             ease: "power4.inOut"
         })
-        .to(imageWrapper.current, {
-            scale: 1,
-            duration: 2,
-            ease: "expo.out"
-        }, "-=1")
-        .to(".char-reveal", {
-            y: 0,
-            skewY: 0,
-            stagger: 0.05,
-            duration: 1.2,
-        }, "-=1.5")
-        .to(".ui-element", {
-            opacity: 1,
-            y: 0,
-            stagger: 0.1,
-            duration: 1
-        }, "-=1");
+            .to(imageWrapper.current, {
+                scale: 1,
+                duration: 2,
+                ease: "expo.out"
+            }, "-=1")
+            .to(".char-reveal", {
+                y: 0,
+                skewY: 0,
+                stagger: 0.05,
+                duration: 1.2,
+            }, "-=1.5")
+            .to(".ui-element", {
+                opacity: 1,
+                y: 0,
+                stagger: 0.1,
+                duration: 1
+            }, "-=1");
 
         gsap.to(textGroup.current, {
             scrollTrigger: {
@@ -66,7 +65,7 @@ const Hero = () => {
         <ReactLenis root>
             <section ref={container} className='relative min-h-[110vh] sm:min-h-[120vh] w-full bg-[#f5f5f3] overflow-hidden text-[#0a0a0a] font-Zeist_Medium'>
                 <Navbar />
-                
+
                 {/* BACKGROUND WATERMARK - Scaled for 2xl */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap opacity-[0.03] select-none pointer-events-none">
                     <h2 className="text-[35vw] 2xl:text-[25vw] font-black uppercase tracking-tighter">Creative Engine</h2>
