@@ -112,7 +112,7 @@ const Expertise = () => {
             icon: <IconEditing />
         },
         {
-            title: "SEO Strategy",
+            title: "Instagram Reels Strategy",
             desc: "Strategic optimization for discoverability",
             tag: "Algorithm",
             size: "md:col-span-1 md:h-[550px]",
@@ -251,7 +251,6 @@ const Expertise = () => {
                             </div>
 
                             {/* HOVER ACCENT LINE */}
-                            <div className="absolute top-0 right-0 w-1 h-0 bg-black group-hover:h-full group-hover:bg-white transition-all duration-700" />
                         </div>
                     ))}
                 </div>

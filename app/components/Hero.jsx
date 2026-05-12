@@ -72,7 +72,7 @@ const Hero = () => {
                 </div>
 
                 {/* MAIN IMAGE CONTAINER - Asymmetric & Responsive Width */}
-                <div className="absolute right-0 top-0 w-full md:w-[70%] lg:w-[60%] 2xl:w-[55%] h-[100vh] md:h-full z-0">
+                <div className="absolute right-0 top-0 w-full md:w-[70%] lg:w-[60%] 2xl:w-[55%] z-2 h-[100vh] md:h-full ">
                     <div ref={imageWrapper} className="relative w-full h-full">
                         <Image
                             src={hero.herogray}
@@ -86,40 +86,32 @@ const Hero = () => {
                 </div>
 
                 {/* CONTENT LAYER */}
-                <div className="relative z-10 h-screen w-full flex  flex-col justify-between px-6 py-10 sm:px-10 sm:py-16 md:px-16 md:py-20 lg:px-24 2xl:px-32">
+                <div className="relative z-10 h-screen w-full flex  flex-col justify-between px-6   py-10 sm:px-10 sm:py-16 md:px-16 md:py-20 lg:px-8 2xl:px-8">
 
                     {/* TOP BAR - Vertical alignment adjustments */}
-                    <div className="flex justify-between items-start pt-12 sm:pt-16">
+                    <div className="flex justify-between items-start pt-12 sm:pt-16 ">
                         <div className="ui-element">
-                            <span className="text-[8px] sm:text-[10px] 2xl:text-xs font-bold tracking-[0.3em] uppercase border-l-2 border-black pl-3">
+                            <span className="text-[8px] sm:text-[10px] 2xl:text-xs font-bold opacity-80 ">
                                 Director Portfolio / 26
                             </span>
                         </div>
-                        <div className="ui-element hidden sm:block text-right">
-                            <p className="text-[8px] sm:text-[10px] font-medium leading-none mb-1">LOCAL TIME</p>
-                            <p className="text-base sm:text-lg 2xl:text-xl font-light tracking-tighter">14:42 GMT+5</p>
-                        </div>
+
                     </div>
 
                     {/* MAIN TITLE BLOCK - Fluid Typography */}
-                    <div ref={textGroup} className="relative mt-auto  mb-8 sm:mb-12">
+                    <div ref={textGroup} className="relative mt-auto  mb-8 sm:mb-12 ">
                         <div className="overflow-hidden ">
-                            <h1 className="text-[16vw]  md:text-[14vw] lg:text-[11vw] 2xl:text-[9vw] font-black leading-[0.85] sm:leading-[0.8] uppercase tracking-tighter">
+                            <h1 className="text-[16vw]  md:text-[14vw] lg:text-[11vw] 2xl:text-[9vw] font-bold leading-[0.85] sm:leading-[0.8] uppercase tracking-tighter">
                                 <span className="char-reveal  inline-block">BHARATH</span>
                             </h1>
                         </div>
                         <div className="overflow-hidden ml-[8vw] sm:ml-[5vw]">
-                            <h1 className="text-[16vw] md:text-[14vw] lg:text-[11vw] 2xl:text-[9vw] font-black leading-[0.85] sm:leading-[0.8] uppercase tracking-tighter outline-text text-transparent">
+                            <h1 className="text-[16vw] md:text-[14vw] lg:text-[11vw] 2xl:text-[9vw] font-bold leading-[0.85] sm:leading-[0.8]  tracking-tighter outline-text text-transparent">
                                 <span className="char-reveal inline-block">REDDY</span>
                             </h1>
                         </div>
 
-                        {/* Secondary Description - Dynamic positioning */}
-                        <div className="ui-element  relative mt-6 sm:absolute sm:-bottom-4 sm:right-0 md:right-auto md:left-[55%] lg:left-[50%] w-full sm:max-w-[280px] lg:max-w-[320px] 2xl:max-w-[400px] bg-black text-white p-5 sm:p-6 lg:p-8 rounded-sm shadow-2xl">
-                            <p className="text-[10px] sm:text-xs 2xl:text-sm leading-relaxed opacity-80 uppercase tracking-[0.15em] sm:tracking-widest">
-                                Crafting visual identities for the next generation of digital media.
-                            </p>
-                        </div>
+   
                     </div>
 
                     {/* BOTTOM STATUS BAR - Grid to Flex transition */}

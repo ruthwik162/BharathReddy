@@ -108,9 +108,9 @@ const About = () => {
                 <div className="lg:col-span-7 relative">
                     <div className="overflow-hidden">
                         <TextY>
-                            <h2 className="reveal-text text-5xl sm:text-7xl 2xl:text-[5vw] font-semibold uppercase tracking-tighter leading-[0.9] mb-12">
-                                The Synergy of <br />
-                                <span className="outline-text text-transparent italic font-light">Art & Data</span>
+                            <h2 className="reveal-text text-4xl sm:text-5xl 2xl:text-[4vw] font-semibold  tracking-tighter leading-[0.9] mb-12">
+                                About<br />
+                                <span className="outline-text text-transparent font-light">Me</span>
                             </h2>
                         </TextY>
 
@@ -118,9 +118,9 @@ const About = () => {
 
                     <div className="max-w-xl 2xl:max-w-3xl space-y-8">
                         <TextY>
-                            <p className=" text-xl sm:text-2xl 2xl:text-[1.5vw] 2xl:leading-[1.8vw] font-medium leading-tight">
-                                Hi, I'm Bharath — a content creator who turned a passion for storytelling into a thriving digital presence. I'm currently pursuing my B.Tech at Mallareddy University (graduating 2026), while simultaneously growing my YouTube channel to 102K+ subscribers entirely through organic strategies.                            </p>
-
+                            <p className="text-xl sm:text-2xl 2xl:text-[1.5vw] 2xl:leading-[1.8vw] font-medium leading-tight">
+                                Hi, I'm Bharath, a professional Content Creator and Content Strategist at Ecomous Company. I specialize in creating engaging digital content, developing audience growth strategies, and managing brand-focused storytelling across platforms. I graduated with a B.Tech degree from Malla Reddy University and successfully grew my YouTube channel to 102K+ subscribers entirely through organic strategies, audience engagement, and consistent content planning.
+                            </p>
                         </TextY>
                         <TextY>
 
@@ -145,13 +145,13 @@ const About = () => {
                     {/* Stats Grid */}
                     <div className="stat-grid grid grid-cols-3 gap-8 border-t border-black/10 mt-20 pt-12">
                         {[
-                            { label: "Audience", value: "102", suffix: "K+" },
-                            { label: "Retention", value: "8", suffix: ".5%" },
-                            { label: "Influence", value: "9", suffix: "K+" }
+                            { label: "Youtube", value: "102", suffix: "K+" },
+                            { label: "Growth", value: "8", suffix: ".5%" },
+                            { label: "Instagram", value: "14", suffix: "K+" }
                         ].map((stat, i) => (
                             <div key={i}>
                                 <p className="text-[9px] 2xl:text-xs font-bold opacity-40 uppercase mb-3 tracking-widest">{stat.label}</p>
-                                <h3 className="text-3xl sm:text-5xl 2xl:text-7xl font-black tracking-tighter">
+                                <h3 className="text-3xl sm:text-5xl 2xl:text-7xl font-semibold tracking-tighter">
                                     <span className="stat-number">{stat.value}</span>{stat.suffix}
                                 </h3>
                             </div>

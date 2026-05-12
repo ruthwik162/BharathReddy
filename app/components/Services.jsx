@@ -77,7 +77,7 @@ const Services = () => {
             services.forEach((_, i) => {
                 ScrollTrigger.create({
                     trigger: `.service-block-${i}`,
-                    start: "top 40%",
+                    start: "top 60%",
                     end: "bottom 40%",
                     onEnter: () => setActiveIndex(i),
                     onEnterBack: () => setActiveIndex(i),
@@ -111,7 +111,7 @@ const Services = () => {
                 <div className="mb-32">
                     <p className="text-[9px] font-bold tracking-[0.5em] uppercase text-black/40 mb-2">Capabilities / 01</p>
                     <h2 className="text-[12vw] md:text-[5vw] font-bold uppercase tracking-tighter leading-[0.85] text-[#0a0a0a]">
-                        Service<br /><span className="italic font-light">Structure</span>
+                        Service<br /><span className="font-light">Included</span>
                     </h2>
                 </div>
 
