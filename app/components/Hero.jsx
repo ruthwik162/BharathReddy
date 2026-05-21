@@ -120,8 +120,8 @@ const Hero = () => {
                             <div>
                                 <p className="text-[8px] sm:text-[9px] font-bold uppercase opacity-40 mb-2">Social</p>
                                 <div className="flex gap-4 text-[10px] sm:text-xs font-medium uppercase tracking-tight">
-                                    <a href="#" className="hover:line-through transition-all">Instagram</a>
-                                    <a href="#" className="hover:line-through transition-all">Twitter</a>
+                                    <a href="https://www.instagram.com/bharathtechz?igsh=aTdydnBheW9sZnVi" className="hover:line-through transition-all">Instagram</a>
+                                    <a href="https://youtube.com/@bharathfactz?si=70A3n8SPnR7LX1KC" className="hover:line-through transition-all">YouTube</a>
                                 </div>
                             </div>
                             <div>

@@ -26,26 +26,33 @@ const Contact = () => {
             duration: 1,
             ease: "expo.out"
         })
-        .from(".contact-card", {
-            clipPath: "inset(0% 0% 100% 0%)",
-            y: 50,
-            duration: 1.2,
-            stagger: 0.1,
-            ease: "power4.inOut"
-        }, "-=0.5")
-        .from(".input-line", {
-            scaleX: 0,
-            transformOrigin: "left",
-            duration: 1,
-            stagger: 0.1,
-            ease: "expo.inOut"
-        }, "-=0.8");
+            .from(".contact-card", {
+                clipPath: "inset(0% 0% 100% 0%)",
+                y: 50,
+                duration: 1.2,
+                stagger: 0.1,
+                ease: "power4.inOut"
+            }, "-=0.5")
+            .from(".input-line", {
+                scaleX: 0,
+                transformOrigin: "left",
+                duration: 1,
+                stagger: 0.1,
+                ease: "expo.inOut"
+            }, "-=0.8");
 
     }, { scope: containerRef });
+    const socialLinks = [
+        {
+            name: 'Instagram', href: 'https://www.instagram.com/bharathtechz?igsh=aTdydnBheW9sZnVi'
+        },
+        { name: 'YouTube', href: 'https://youtube.com/@bharathfactz?si=70A3n8SPnR7LX1KC' },
+        { name: 'LinkedIn', href: 'https://www.linkedin.com/in/muli-bharath-reddy-96b514296?utm_source=share_via&utm_content=profile&utm_medium=member_ios' }
+    ]
 
     return (
         <section ref={containerRef} className="relative w-full bg-[#f5f5f3] py-24 px-6 md:px-16 lg:px-24 overflow-hidden text-[#0a0a0a] font-Zeist_Medium">
-            
+
             {/* BACKGROUND WATERMARK */}
             <div className="absolute -bottom-10 -left-10 opacity-[0.03] select-none pointer-events-none">
                 <h2 className="text-[25vw] font-bold uppercase tracking-tighter leading-none">Connect</h2>
@@ -63,7 +70,7 @@ const Contact = () => {
             </div>
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16">
-                
+
                 {/* LEFT: TECHNICAL DATA */}
                 <div className="lg:col-span-5 space-y-12">
                     <div className="contact-card group">
@@ -84,9 +91,9 @@ const Contact = () => {
                     </div>
 
                     <div className="pt-12 border-t border-black/5 flex gap-8">
-                        {['Instagram', 'Twitter', 'LinkedIn'].map((link) => (
-                            <a key={link} href="#" className="text-[10px] font-bold uppercase tracking-widest hover:line-through">
-                                {link}
+                        {socialLinks.map((link) => (
+                            <a key={link.name} href={link.href} className="text-[10px] font-bold uppercase tracking-widest hover:line-through">
+                                {link.name}
                             </a>
                         ))}
                     </div>
@@ -96,27 +103,27 @@ const Contact = () => {
                 <div className="lg:col-span-7 bg-white p-8 md:p-12 shadow-sm border border-black/5">
                     <form ref={formRef} className="space-y-10">
                         <div className="relative">
-                            <input 
-                                type="text" 
-                                placeholder="YOUR NAME" 
+                            <input
+                                type="text"
+                                placeholder="YOUR NAME"
                                 className="w-full bg-transparent border-none py-4 text-xs font-bold tracking-widest focus:outline-none placeholder:text-black/20"
                             />
                             <div className="input-line w-full h-[1px] bg-black/10 origin-left" />
                         </div>
 
                         <div className="relative">
-                            <input 
-                                type="email" 
-                                placeholder="EMAIL ADDRESS" 
+                            <input
+                                type="email"
+                                placeholder="EMAIL ADDRESS"
                                 className="w-full bg-transparent border-none py-4 text-xs font-bold tracking-widest focus:outline-none placeholder:text-black/20"
                             />
                             <div className="input-line w-full h-[1px] bg-black/10 origin-left" />
                         </div>
 
                         <div className="relative">
-                            <textarea 
-                                rows="4" 
-                                placeholder="HOW CAN WE SCALE?" 
+                            <textarea
+                                rows="4"
+                                placeholder="HOW CAN WE SCALE?"
                                 className="w-full bg-transparent border-none py-4 text-xs font-bold tracking-widest focus:outline-none placeholder:text-black/20 resize-none"
                             ></textarea>
                             <div className="input-line w-full h-[1px] bg-black/10 origin-left" />
